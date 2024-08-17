@@ -91,14 +91,14 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-ecommer
 - **Cart Page:**
 ![Cart Page Screenshot](screenshots/cart-page-UrbanCart.png)
 
-- **All Products - Admin Dashboard:**
-![All Products - Admin Dashboard Screenshot](screenshots/allProducts-adminDash-UrbanCart.png)
-
 - **Create Category - Admin Dashboard:**
 ![Create Category - Admin Dashboard Screenshot](screenshots/createCategory-adminDash-UrbanCart.png)
 
 - **Create Products - Admin Dashboard:**
 ![Create Products - Admin Dashboard Screenshot](screenshots/createProducts-adminDash-UrbanCart.png)
+
+- **All Products - Admin Dashboard:**
+![All Products - Admin Dashboard Screenshot](screenshots/allProducts-adminDash-UrbanCart.png)
 
 - **Edit Product - Admin Dashboard:**
 ![Edit Product - Admin Dashboard Screenshot](screenshots/editProduct-adminDash-UrbanCart.png)
