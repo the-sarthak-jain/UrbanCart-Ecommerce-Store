@@ -100,6 +100,9 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-ecommer
 - **Create Products - Admin Dashboard:**
 ![Create Products - Admin Dashboard Screenshot](screenshots/createProducts-adminDash-UrbanCart.png)
 
+- **Edit Product - Admin Dashboard:**
+![Edit Product - Admin Dashboard Screenshot](screenshots/editProduct-adminDash-UrbanCart.png)
+
 - **Login Form:**
 ![Login Form](screenshots/loginForm-UrbanCart.png)
 
