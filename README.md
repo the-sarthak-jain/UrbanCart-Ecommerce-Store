@@ -86,13 +86,25 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-ecommer
 
 ## Screenshots 🖼️
 - **Homepage:**
-![Homepage Screenshot](screenshots/homepage-urban-cart.png)
+![Homepage Screenshot](screenshots/home-page-UrbanCart.png)
 
-- **Product Page:**
-![Product Page Screenshot](screenshots/product-page-urban-cart.png)
+- **Cart Page:**
+![Cart Page Screenshot](screenshots/cart-page-UrbanCart.png)
 
-- **Admin Dashboard:**
-![Admin Dashboard Screenshot](screenshots/admin-dashboard-urban-cart.png)
+- **All Products - Admin Dashboard:**
+![All Products - Admin Dashboard Screenshot](screenshots/allProducts-adminDash-UrbanCart.png)
+
+- **Create Category - Admin Dashboard:**
+![Create Category - Admin Dashboard Screenshot](screenshots/createCategory-adminDash-UrbanCart.png)
+
+- **Create Products - Admin Dashboard:**
+![Create Products - Admin Dashboard Screenshot](screenshots/createProducts-adminDash-UrbanCart.png)
+
+- **Login Form:**
+![Login Form](screenshots/loginForm-UrbanCart.png)
+
+- **User Profile - User Dashboard:**
+![User Profile - User Dashboard Screenshot](screenshots/userDash-UrbanCart.png)
 
 ## Usage 🛒
 - **Homepage:** Displays products and allows users to filter by category or price.
