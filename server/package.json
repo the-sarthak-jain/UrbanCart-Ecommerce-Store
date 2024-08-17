@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "braintree": "^3.23.0",
