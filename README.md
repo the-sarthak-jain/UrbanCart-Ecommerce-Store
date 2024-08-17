@@ -125,6 +125,6 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 ---
 ## Contact
 
-For any inquiries or support, please contact [Sarthak Jain](mail.sarthakjain@gmail.com).
+For any inquiries or support, please contact [Sarthak Jain](mailto:mail.sarthakjain@gmail.com).
 
 Thank you for checking out Urban Cart! If you have any questions or suggestions, feel free to reach out.
