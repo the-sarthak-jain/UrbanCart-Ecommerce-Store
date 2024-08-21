@@ -1,4 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/Page-not-found";
 import About from "./pages/About-us";
@@ -21,11 +23,12 @@ import UpdateProduct from "./pages/Admin/updateProduct";
 import UserDashboard from "./pages/User/userDashboard";
 import PrivateRoute from "./components/routes/Private";
 import Profile from "./pages/User/Profile";
+import DetailPage from "./pages/detailPage";
 
 function App() {
   return (
     <>
-      {/* <Header></Header> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<PageNotFound />} />
@@ -38,6 +41,7 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/product/:slug" element={<DetailPage />} />
 
         {/* User Dashboard */}
         <Route path="/dashboard" element={<PrivateRoute />}>
@@ -54,6 +58,7 @@ function App() {
           <Route path="admin/product/:slug" element={<UpdateProduct />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }
