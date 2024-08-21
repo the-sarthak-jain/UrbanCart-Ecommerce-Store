@@ -28,8 +28,6 @@ router.get("/get-products", formidable(), getAllProductController);
 
 router.get(
   "/find-products/:slug",
-  requireSignIn,
-  isAdmin,
   formidable(),
   getSingleProductController
 );
