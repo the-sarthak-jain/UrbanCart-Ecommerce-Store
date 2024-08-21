@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/layouts/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import { AiFillWarning } from "react-icons/ai";
 import axios from "axios";
@@ -115,20 +115,26 @@ const CartPage = () => {
                   />
                 </div>
                 <div className="col-md-5">
-                  <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">
-                      {p.description.substring(0, 30)}...
-                    </p>
-                    <p className="card-text">
-                      <strong>Price:</strong>{" "}
-                      {p.price.toLocaleString("en-US", {
-                        style: "currency",
-                        currency: "INR",
-                      })}
-                    </p>
-                  </div>
+                  <Link
+                    to={`/product/${p.slug}`}
+                    className="product-link text-decoration-none"
+                  >
+                    <div className="card-body text-dark">
+                      <h5 className="card-title">{p.name}</h5>
+                      <p className="card-text">
+                        {p.description.substring(0, 30)}...
+                      </p>
+                      <p className="card-text">
+                        <strong>Price:</strong>{" "}
+                        {p.price.toLocaleString("en-US", {
+                          style: "currency",
+                          currency: "INR",
+                        })}
+                      </p>
+                    </div>
+                  </Link>
                 </div>
+
                 <div className="col-md-3 text-center">
                   <button
                     className="btn btn-danger"
