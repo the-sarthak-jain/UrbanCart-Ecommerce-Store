@@ -184,27 +184,33 @@ function Home() {
             <div className="row">
               {products.map((p) => (
                 <div key={p._id} className="col-lg-4 col-md-6 mb-4">
-                  <Link
-                    to={`/product/${p.slug}`}
-                    className="product-link text-decoration-none"
-                  >
                   <div className="card h-100 shadow-sm">
-                    <img
-                      src={`/api/v1/product/get-photo/${p._id}`}
-                      className="card-img-top"
-                      alt={p.name}
-                      style={{
-                        width: "100%",
-                        height: "200px",
-                        objectFit: "contain",
-                        padding: "8px",
-                      }}
-                    />
+                    <Link
+                      to={`/product/${p.slug}`}
+                      className="product-link text-decoration-none"
+                    >
+                      <img
+                        src={`/api/v1/product/get-photo/${p._id}`}
+                        className="card-img-top"
+                        alt={p.name}
+                        style={{
+                          width: "100%",
+                          height: "200px",
+                          objectFit: "contain",
+                          padding: "8px",
+                        }}
+                      />
+                    </Link>
                     <div className="card-body d-flex flex-column">
-                      <h5 className="card-title">{p.name}</h5>
-                      <p className="card-text">
-                        {p.description.substring(0, 60)}...
-                      </p>
+                      <Link
+                        to={`/product/${p.slug}`}
+                        className="product-link text-decoration-none"
+                      >
+                        <h5 className="card-title text-dark">{p.name}</h5>
+                        <p className="card-text text-dark">
+                          {p.description.substring(0, 60)}...
+                        </p>
+                      </Link>
                       <h6 className="mt-auto card-text text-success">
                         {p.price.toLocaleString("en-US", {
                           style: "currency",
@@ -234,7 +240,6 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                  </Link>
                 </div>
               ))}
             </div>
