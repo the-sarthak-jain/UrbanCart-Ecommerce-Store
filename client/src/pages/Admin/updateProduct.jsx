@@ -20,7 +20,7 @@ const UpdateProduct = () => {
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
 
-  // Get Single Category
+  // Get Single Product
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
