@@ -88,6 +88,9 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-ecommer
 - **Homepage:**
 ![Homepage Screenshot](screenshots/home-page-UrbanCart.png)
 
+- **Product Detail Page:**
+![Product Detail Page Screenshot](screenshots/prodDetailPage-UrbanCart.png)
+
 - **Cart Page:**
 ![Cart Page Screenshot](screenshots/cart-page-UrbanCart.png)
 
