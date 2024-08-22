@@ -11,7 +11,7 @@ Urban Cart is a React-based full-stack e-commerce web application that provides 
 - **Responsive Design:** Built using Bootstrap and FontAwesome for styling and icons.
 
 ## Live Demo 🌐
-Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-ecommerce-store.onrender.com/)
+Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.netlify.app/)
 
 ## Tech Stack 💻
 - **Frontend:** React.js, Bootstrap, FontAwesome
