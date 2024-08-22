@@ -7,9 +7,14 @@ import authRouter from "./routes/authRouter.js";
 import categoryRouter from "./routes/categoryRoutes.js";
 import productRouter from "./routes/productRouter.js";
 import contactRouter from "./routes/contactRouter.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config({ path: "./config.env" });
+
+app.use(cors({
+  origin: "https://urbancart-ecommerce-store.onrender.com/"  // Replace with your Netlify URL
+}));
 
 app.use(express.json());
 dotenv.config();
