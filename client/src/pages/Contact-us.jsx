@@ -1,9 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/layouts/Layout";
+import axios from "axios";
+import toast from "react-hot-toast";
 
-function ContactUs() {
+const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("/api/v1/contact/contact-us", {
+        name,
+        email,
+        number,
+        message,
+      });
+      if (res && res.data.success) {
+        toast.success(res.data && res.data.message);
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+  };
 
   return (
     <Layout title="Contact Us - Ecommerce App">
@@ -19,7 +45,7 @@ function ContactUs() {
           className="shadow-lg p-4 rounded"
           style={{ backgroundColor: "white", maxWidth: "800px", width: "100%" }}
         >
-          <form method="post" action="/contact-us">
+          <form onSubmit={handleSubmit}>
             <h2 className="mb-4 text-center">Contact Us</h2>
             <div className="row mb-3">
               <div className="col-md-6">
@@ -28,11 +54,13 @@ function ContactUs() {
                 </label>
                 <input
                   type="text"
-                  name="fullName"
                   className="form-control"
-                  id="exampleInputName"
-                  aria-describedby="nameHelp"
+                  name="username"
+                  id="username"
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  autoFocus
                 />
               </div>
               <div className="col-md-6">
@@ -43,9 +71,10 @@ function ContactUs() {
                   type="email"
                   className="form-control"
                   name="emailAddress"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  id="email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
@@ -60,9 +89,11 @@ function ContactUs() {
                 <input
                   type="tel"
                   className="form-control"
-                  name="phoneNumber"
-                  id="exampleInputPhone"
+                  name="number"
+                  id="number"
                   required
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
                 />
               </div>
               <div className="col-md-6">
@@ -73,8 +104,10 @@ function ContactUs() {
                   name="message"
                   className="form-control"
                   rows="4"
-                  id="exampleInputMessage"
+                  id="message"
                   required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
             </div>
