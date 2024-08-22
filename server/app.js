@@ -13,7 +13,8 @@ const app = express();
 dotenv.config({ path: "./config.env" });
 
 app.use(cors({
-  origin: "https://urbancart-ecommerce-store.onrender.com/"  // Replace with your Netlify URL
+  origin: ['http://localhost:3000'], // Add your frontend URL
+  credentials: true, // If you need to allow cookies/auth headers
 }));
 
 app.use(express.json());
