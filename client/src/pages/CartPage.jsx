@@ -146,7 +146,7 @@ const CartPage = () => {
               </div>
             ))}
           </div>
-          <div className="col-md-5">
+          <div className="col-md-5 mb-3">
             <div className="card shadow-sm">
               <div className="card-body">
                 <h4>Cart Summary</h4>
