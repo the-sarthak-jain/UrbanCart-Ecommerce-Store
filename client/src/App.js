@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 import PageNotFound from "./pages/Page-not-found";
 import About from "./pages/About-us";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/privacyPolicy";
 import ContactUs from "./pages/Contact-us";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/Forgot-password";
 import CartPage from "./pages/CartPage";
+import DetailPage from "./pages/detailPage";
 
 // For Admin Dashboard
 import AdminDashboard from "./pages/Admin/adminDashboard";
@@ -23,7 +25,6 @@ import UpdateProduct from "./pages/Admin/updateProduct";
 import UserDashboard from "./pages/User/userDashboard";
 import PrivateRoute from "./components/routes/Private";
 import Profile from "./pages/User/Profile";
-import DetailPage from "./pages/detailPage";
 import Orders from "./pages/User/orders";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
