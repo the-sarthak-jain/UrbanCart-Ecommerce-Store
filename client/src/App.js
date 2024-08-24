@@ -24,6 +24,7 @@ import UserDashboard from "./pages/User/userDashboard";
 import PrivateRoute from "./components/routes/Private";
 import Profile from "./pages/User/Profile";
 import DetailPage from "./pages/detailPage";
+import Orders from "./pages/User/orders";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<UserDashboard />} />
           <Route path="user/profile" element={<Profile />} />
+          <Route path="user/orders" element={<Orders />} />
         </Route>
 
         {/* Admin Dashboard */}
