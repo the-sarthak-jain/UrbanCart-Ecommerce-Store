@@ -1,5 +1,7 @@
 import express from "express";
 import {
+  braintreePaymentController,
+  braintreeTokenController,
   createProductController,
   deleteProductController,
   getAllProductController,
@@ -26,11 +28,7 @@ router.post(
 
 router.get("/get-products", formidable(), getAllProductController);
 
-router.get(
-  "/find-products/:slug",
-  formidable(),
-  getSingleProductController
-);
+router.get("/find-products/:slug", formidable(), getSingleProductController);
 
 router.get("/get-photo/:pid", formidable(), productPhotoController);
 
@@ -58,5 +56,12 @@ router.get("/product-count", productCountController);
 
 // Product list base on page
 router.get("/product-list/:page", productListController);
+
+// payment routes
+// token
+router.get("/braintree/token", braintreeTokenController);
+
+// payments
+router.post("/braintree/payment", requireSignIn, braintreePaymentController);
 
 export default router;
