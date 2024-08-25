@@ -101,7 +101,14 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon navbar-dark"></span>
+          </button>
+          <button className="navbar-toggler" type="button">
+            <NavLink to="/cart" className="text-white">
+              <Badge count={cart?.length} showZero>
+                <i className="fa-solid fa-cart-shopping fs-4 me-2 text-white"></i>
+              </Badge>
+            </NavLink>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -256,7 +263,7 @@ const Header = () => {
                 Search
               </button>
             </form>
-            <div className="d-flex align-items-center ms-3">
+            <div className="d-flex d-none d-lg-block align-items-center ms-3">
               <NavLink to="#" className="text-white me-3">
                 <i className="fa-regular fa-heart fs-4 me-2"></i>
                 <span className="d-none d-md-inline">Wishlist</span>
