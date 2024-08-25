@@ -4,10 +4,12 @@ Urban Cart is a React-based full-stack e-commerce web application that provides 
 
 ## Features ✨
 - **User Authentication:** Register, login, and logout functionality.
-- **Product and Category CRUD:** Admin can create, update, and delete products and categories.
-- **Shopping Cart:** Add items to the cart, adjust quantities, and proceed to checkout.
-- **Filters:** Filter products by category or price.
 - **Admin & User Dashboards:** Separate interfaces for admins and users.
+- **Product and Category CRUD:** Admin can create, update, and delete products and categories.
+- **Filters:** Filter products by category or price.
+- **Shopping Cart:** Add items to the cart, adjust quantities, and proceed to checkout.
+- **Checkout Process:** Secure and streamlined checkout process for a smooth purchase experience.
+- **Order History:** View your past orders with details.
 - **Responsive Design:** Built using Bootstrap and FontAwesome for styling and icons.
 
 ## Live Demo 🌐
@@ -18,7 +20,7 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT for user sessions
-- **Deployment:** Hosted on Render
+- **Deployment:** Netlify (Frontend), Render (Backend)
 
 ## Prerequisites 🔧
 - Node.js
