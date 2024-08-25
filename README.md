@@ -97,6 +97,9 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
 - **Orders Page:**
 ![Orders Page Screenshot](screenshots/ordersPage-UrbanCart.png)
 
+- **User Profile - User Dashboard:**
+![User Profile - User Dashboard Screenshot](screenshots/userDash-UrbanCart.png)
+
 - **Create Category - Admin Dashboard:**
 ![Create Category - Admin Dashboard Screenshot](screenshots/createCategory-adminDash-UrbanCart.png)
 
@@ -111,9 +114,6 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
 
 - **Login Form:**
 ![Login Form](screenshots/loginForm-UrbanCart.png)
-
-- **User Profile - User Dashboard:**
-![User Profile - User Dashboard Screenshot](screenshots/userDash-UrbanCart.png)
 
 ## Usage 🛒
 - **Homepage:** Displays products and allows users to filter by category or price.
