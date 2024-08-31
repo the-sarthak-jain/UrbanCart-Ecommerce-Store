@@ -57,6 +57,9 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
    PORT=8080
    JWT_SECRET=MYNAMEISSARTHAKJAIN
    MONGO_URL=mongodb+srv://<username>:<password>@cluster0.vzsyypy.mongodb.net/Ecommerce?retryWrites=true&w=majority&appName=Cluster0
+   BRAINTREE_MERCHANT_ID=Your_BrainTree_MerchantID
+   BRAINTREE_PUBLIC_KEY=Your_BrainTree_PublicKey
+   BRAINTREE_PRIVATE_KEY=Your_BrainTree_PrivateKey
    ```
 
 5. **Run the Application:**
