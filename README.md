@@ -87,7 +87,7 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
   - `controllers/`: Contains controller logic for products, categories, etc.
   - `models/`: MongoDB models
   - `routes/`: API routes
-  - `.env`: Contains Environment Variables
+  - `config.env`: Contains Environment Variables
 
 ## Screenshots 🖼️
 - **Homepage:**
