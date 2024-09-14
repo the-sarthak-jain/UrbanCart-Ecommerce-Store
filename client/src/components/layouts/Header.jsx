@@ -7,10 +7,12 @@ import logo from "../images/logo.svg";
 import { GiShoppingBag } from "react-icons/gi";
 import { useAuth } from "../../context/auth";
 import { useCart } from "../../context/cart";
+import { useWishlist } from "../../context/wishlist";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart, setCart] = useCart();
+  const [wishlist, setWishlist] = useWishlist();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -107,6 +109,13 @@ const Header = () => {
             <NavLink to="/cart" className="text-white">
               <Badge count={cart?.length} showZero>
                 <i className="fa-solid fa-cart-shopping fs-4 me-2 text-white"></i>
+              </Badge>
+            </NavLink>
+          </button>
+          <button className="navbar-toggler" type="button">
+            <NavLink to="/wishlist" className="text-white">
+              <Badge count={wishlist?.length} showZero>
+              <i className="fa-regular fa-heart fs-4 me-2 text-white"></i>
               </Badge>
             </NavLink>
           </button>
@@ -264,8 +273,10 @@ const Header = () => {
               </button>
             </form>
             <div className="d-flex d-none d-lg-block align-items-center ms-3">
-              <NavLink to="#" className="text-white me-3">
-                <i className="fa-regular fa-heart fs-4 me-2"></i>
+              <NavLink to="/wishlist" className="text-white me-3">
+                <Badge count={wishlist?.length} showZero>
+                  <i className="fa-regular fa-heart fs-4 me-2 text-white"></i>
+                </Badge>
                 <span className="d-none d-md-inline">Wishlist</span>
               </NavLink>
               <NavLink to="/cart" className="text-white">
