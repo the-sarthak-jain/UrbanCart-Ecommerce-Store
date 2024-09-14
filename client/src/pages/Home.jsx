@@ -7,6 +7,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AiOutlineReload } from "react-icons/ai";
 import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
+import { useWishlist } from "../context/wishlist";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -17,12 +18,15 @@ function Home() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [cart, setCart] = useCart();
+  const [wishlist, setWishlist] = useWishlist();
   const navigate = useNavigate();
 
   // Get All Categories
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      const { data } = await axios.get(
+        "https://urbancart-ecommerce-store.onrender.com/api/v1/category/get-category"
+      );
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -34,7 +38,9 @@ function Home() {
   // Get Total Count of Products
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/product-count");
+      const { data } = await axios.get(
+        "https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-count"
+      );
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -46,7 +52,9 @@ function Home() {
     try {
       setLoading(true);
       // const { data } = await axios.get(`/api/v1/product/get-products?page=${page}`);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -79,10 +87,13 @@ function Home() {
   const filterProduct = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.post("/api/v1/product/product-filters", {
-        checked,
-        radio,
-      });
+      const { data } = await axios.post(
+        "https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-filters",
+        {
+          checked,
+          radio,
+        }
+      );
       setProducts(data?.products);
       setLoading(false);
     } catch (error) {
@@ -129,7 +140,9 @@ function Home() {
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -190,7 +203,7 @@ function Home() {
                       className="product-link text-decoration-none"
                     >
                       <img
-                        src={`/api/v1/product/get-photo/${p._id}`}
+                        src={`https://urbancart-ecommerce-store.onrender.com/api/v1/product/get-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.name}
                         style={{
@@ -220,9 +233,15 @@ function Home() {
                       <div className="card-name-price mt-2">
                         <button
                           className="btn btn-outline-primary"
-                          onClick={() => navigate(`/product/${p.slug}`)}
+                          onClick={() => {
+                            setWishlist([...wishlist, p]);
+                            localStorage.setItem(
+                              "wishlist",
+                              JSON.stringify([...wishlist, p])
+                            );
+                            toast.success("Item Added to Wishlist"); }}
                         >
-                          More Details
+                          Wishlist
                         </button>
                         <button
                           className="btn btn-warning text-white ms-2"
