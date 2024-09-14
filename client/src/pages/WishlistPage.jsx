@@ -40,17 +40,17 @@ const WishlistPage = () => {
           <div className="col-md-8 offset-md-2">
             {wishlist.length ? (
               wishlist.map((p) => (
-                <div className="card mb-3 shadow-sm wishlist-card" key={p._id}>
+                <div className="card mb-3 shadow-lg wishlist-card p-3" key={p._id}>
                   <div className="row g-0 align-items-center">
-                    <div className="col-md-4">
+                    <div className="col-5 col-md-4">
                       <img
-                        src={`/api/v1/product/get-photo/${p._id}`}
+                        src={`https://urbancart-ecommerce-store.onrender.com/api/v1/product/get-photo/${p._id}`}
                         alt={p.name}
                         className="img-fluid rounded-start"
-                        style={{ objectFit: "cover", height: "200px" }}
+                        style={{ objectFit: "contain", height: "200px" }}
                       />
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-7 col-md-5">
                       <div className="card-body">
                         <Link
                           to={`/product/${p.slug}`}
@@ -71,9 +71,9 @@ const WishlistPage = () => {
                       </div>
                     </div>
 
-                    <div className="col-md-3 text-center">
+                    <div className="col-md-3 text-center d-flex flex-column justify-content-center gap-2">
                       <button
-                        className="btn btn-primary mb-2"
+                        className="btn btn-primary mb-2  w-75 mx-auto"
                         onClick={() => {
                           setCart([...cart, p]);
                           localStorage.setItem(
@@ -86,7 +86,7 @@ const WishlistPage = () => {
                         Move to Cart
                       </button>
                       <button
-                        className="btn btn-danger"
+                        className="btn btn-danger  w-75 mx-auto"
                         onClick={() => removeWishlistItem(p._id)}
                       >
                         Remove
