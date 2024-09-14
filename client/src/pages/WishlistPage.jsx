@@ -44,7 +44,7 @@ const WishlistPage = () => {
                   <div className="row g-0 align-items-center">
                     <div className="col-5 col-md-4">
                       <img
-                        src={`https://urbancart-ecommerce-store.onrender.com/api/v1/product/get-photo/${p._id}`}
+                        src={`/api/v1/product/get-photo/${p._id}`}
                         alt={p.name}
                         className="img-fluid rounded-start"
                         style={{ objectFit: "contain", height: "200px" }}
