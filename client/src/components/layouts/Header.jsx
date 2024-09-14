@@ -106,16 +106,16 @@ const Header = () => {
             <span className="navbar-toggler-icon navbar-dark"></span>
           </button>
           <button className="navbar-toggler" type="button">
-            <NavLink to="/cart" className="text-white">
-              <Badge count={cart?.length} showZero>
-                <i className="fa-solid fa-cart-shopping fs-4 me-2 text-white"></i>
+            <NavLink to="/wishlist" className="text-white">
+              <Badge count={wishlist?.length} showZero>
+                <i className="fa-regular fa-heart fs-4 me-2 text-white"></i>
               </Badge>
             </NavLink>
           </button>
           <button className="navbar-toggler" type="button">
-            <NavLink to="/wishlist" className="text-white">
-              <Badge count={wishlist?.length} showZero>
-              <i className="fa-regular fa-heart fs-4 me-2 text-white"></i>
+            <NavLink to="/cart" className="text-white">
+              <Badge count={cart?.length} showZero>
+                <i className="fa-solid fa-cart-shopping fs-4 me-2 text-white"></i>
               </Badge>
             </NavLink>
           </button>
@@ -290,36 +290,38 @@ const Header = () => {
         </div>
       </nav>
       {/* Ensure to include additional options for mobile view if necessary */}
-      <div className="d-md-none">
-        <div className="row bg-dark text-light py-2">
-          <div className="col-6 text-center">
-            {auth?.user ? (
-              <NavLink
-                to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
-                className="text-light"
-              >
-                Dashboard
-              </NavLink>
-            ) : (
-              <NavLink to="/login" className="text-light">
-                Login
-              </NavLink>
-            )}
-          </div>
-          <div className="col-6 text-center">
-            {auth?.user ? (
-              <NavLink
-                to="/login"
-                onClick={handleLogout}
-                className="text-light"
-              >
-                Logout
-              </NavLink>
-            ) : (
-              <NavLink to="/register" className="text-light">
-                Register
-              </NavLink>
-            )}
+      <div className="container-fluid">
+        <div className="d-md-none">
+          <div className="row bg-dark text-light py-2">
+            <div className="col-6 text-center">
+              {auth?.user ? (
+                <NavLink
+                  to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
+                  className="text-light"
+                >
+                  Dashboard
+                </NavLink>
+              ) : (
+                <NavLink to="/login" className="text-light">
+                  Login
+                </NavLink>
+              )}
+            </div>
+            <div className="col-6 text-center">
+              {auth?.user ? (
+                <NavLink
+                  to="/login"
+                  onClick={handleLogout}
+                  className="text-light"
+                >
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink to="/register" className="text-light">
+                  Register
+                </NavLink>
+              )}
+            </div>
           </div>
         </div>
       </div>
