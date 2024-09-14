@@ -99,6 +99,9 @@ Check out the live demo: [UrbanCart - Ecommerce Store](https://urbancart-store.n
 - **Cart Page:**
 ![Cart Page Screenshot](screenshots/cart-page-UrbanCart.png)
 
+- **Wishlist Page:**
+![Wishlist Page Screenshot](screenshots/WishlistPage-UrbanCart.png)
+
 - **Orders Page:**
 ![Orders Page Screenshot](screenshots/ordersPage-UrbanCart.png)
 
