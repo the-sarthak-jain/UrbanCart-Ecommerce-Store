@@ -25,7 +25,7 @@ function Home() {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "https://urbancart-ecommerce-store.onrender.com/api/v1/category/get-category"
+        "/api/v1/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -39,7 +39,7 @@ function Home() {
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        "https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-count"
+        "/api/v1/product/product-count"
       );
       setTotal(data?.total);
     } catch (error) {
@@ -53,7 +53,7 @@ function Home() {
       setLoading(true);
       // const { data } = await axios.get(`/api/v1/product/get-products?page=${page}`);
       const { data } = await axios.get(
-        `https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-list/${page}`
+        `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -88,7 +88,7 @@ function Home() {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        "https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-filters",
+        "/api/v1/product/product-filters",
         {
           checked,
           radio,
@@ -141,7 +141,7 @@ function Home() {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `https://urbancart-ecommerce-store.onrender.com/api/v1/product/product-list/${page}`
+        `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -203,7 +203,7 @@ function Home() {
                       className="product-link text-decoration-none"
                     >
                       <img
-                        src={`https://urbancart-ecommerce-store.onrender.com/api/v1/product/get-photo/${p._id}`}
+                        src={`/api/v1/product/get-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.name}
                         style={{
