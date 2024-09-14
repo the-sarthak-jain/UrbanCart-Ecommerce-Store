@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/Forgot-password";
 import CartPage from "./pages/CartPage";
+import WishlistPage from "./pages/WishlistPage";
 import DetailPage from "./pages/detailPage";
 
 // For Admin Dashboard
@@ -44,6 +45,7 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/wishlist" element={<WishlistPage/>} />
         <Route path="/product/:slug" element={<DetailPage />} />
 
         {/* User Dashboard */}
