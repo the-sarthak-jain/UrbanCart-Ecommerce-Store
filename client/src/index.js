@@ -4,6 +4,7 @@ import App from "./App";
 import { AuthProvider } from "./context/auth";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { CartProvider } from "./context/cart";
+import { WishlistProvider } from "./context/wishlist";
 
 import { BrowserRouter } from "react-router-dom";
 
@@ -11,9 +12,11 @@ ReactDOM.render(
   <>
     <AuthProvider>
       <CartProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <WishlistProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </WishlistProvider>
       </CartProvider>
     </AuthProvider>
   </>,
